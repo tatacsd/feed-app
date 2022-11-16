@@ -12,7 +12,6 @@ export function App() {
         <Sidebar />
         <main>
           <Post author="John" content="content here" />
-          <Post author="John" content="content here" />
         </main>
       </div>
     </>
