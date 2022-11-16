@@ -9,3 +9,14 @@
     align-items: flex-start;
 
 }
+
+/* Mobile */
+@media (max-width: 768px) {
+    html {
+        font-size: 0.875rem;
+    }
+ 
+    .wrapper {
+        grid-template-columns: 1fr;
+    }
+}
