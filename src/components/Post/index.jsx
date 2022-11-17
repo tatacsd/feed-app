@@ -58,10 +58,8 @@ export function Post({ author, content, publishedAt }) {
               return <p key={index}>{item.content}</p>;
             case 'anchor':
               return (
-                <p>
-                  <a key={index} href={item.content}>
-                    👉 {item.content}
-                  </a>
+                <p key={index}>
+                  <a href={item.content}>👉 {item.content}</a>
                 </p>
               );
             case 'hashtag':
