@@ -23,6 +23,7 @@ export function Post({ author, content, publishedAt }) {
 
   const handleCommentContentChange = () => {
     setNewComment(event.target.value);
+    event.target.setCustomValidity('');
   };
 
   const handleCreateComment = () => {
@@ -36,6 +37,12 @@ export function Post({ author, content, publishedAt }) {
     const commentsWithoutDeleted = comments.filter((c) => c !== comment);
     setComments(commentsWithoutDeleted);
   };
+
+  const handleNewCommentInvalid = () => {
+    event.target.setCustomValidity('Please enter a comment');
+  };
+
+  const isNewCommentEmpty = newComment.length === 0;
 
   return (
     <article className={css.post}>
@@ -81,9 +88,13 @@ export function Post({ author, content, publishedAt }) {
           placeholder="Write your comment here"
           value={newComment}
           onChange={handleCommentContentChange}
+          required
+          onInvalid={handleNewCommentInvalid}
         />
         <footer>
-          <button type="submit">Post</button>
+          <button type="submit" disabled={isNewCommentEmpty}>
+            Post
+          </button>
         </footer>
       </form>
 
