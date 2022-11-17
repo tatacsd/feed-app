@@ -1,11 +1,19 @@
-import { ThumbsUp, Trash } from 'phosphor-react';
+import { HandsClapping, Trash } from 'phosphor-react';
+import { useState } from 'react';
 import { Avatar } from '../Avatar';
 import css from './Comment.module.css';
 
 export function Comment({ content, onDeleteComment }) {
+  const [claps, setClaps] = useState(0);
+
   const handleDeleteComment = () => {
     onDeleteComment(content);
   };
+
+  const handleClaping = () => {
+    setClaps(claps + 1);
+  };
+
   return (
     <div className={css.comment}>
       <Avatar hasBorders={false} src="https://placekitten.com/200/200" />
@@ -28,10 +36,10 @@ export function Comment({ content, onDeleteComment }) {
           <p>{content}</p>
         </div>
         <footer>
-          <button title="Like comment">
-            <ThumbsUp size={20} />
+          <button title="Like comment" onClick={handleClaping}>
+            <HandsClapping size={20} />
             Claps
-            <span>28</span>
+            <span>{claps}</span>
           </button>
         </footer>
       </div>
