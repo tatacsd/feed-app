@@ -76,7 +76,7 @@ export function App() {
       <div className={css.wrapper}>
         <Sidebar />
         <main>
-          {posts.map((post) => (
+          {posts.map((post, index) => (
             <Post
               key={post.id}
               author={post.author}

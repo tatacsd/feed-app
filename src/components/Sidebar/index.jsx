@@ -8,7 +8,7 @@ const avatarURL = 'https://i.pravatar.cc/400';
 export function Sidebar() {
   return (
     <aside className={css.sidebar}>
-      <img clasName={css.cover} src={imageURL} alt="sidebar" />
+      <img className={css.cover} src={imageURL} alt="sidebar" />
       <div className={css.profile}>
         <Avatar src={avatarURL} />
         <strong>John Doe</strong>
