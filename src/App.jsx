@@ -40,7 +40,7 @@ const posts = [
         content:
           'Acabei de subir mais um projeto no meu portifa. É um projeto que fiz no NLW Return, evento da Rocketseat. O nome do projeto é DoctorCare 🚀',
       },
-      { type: 'anchor', content: ' 👉 jane.design/doctorcare' },
+      { type: 'anchor', content: 'jane.design/doctorcare' },
       { type: 'hashtag', content: '#novoprojeto' },
       { type: 'hashtag', content: '#nlw' },
       { type: 'hashtag', content: '#rocketseat' },
@@ -60,7 +60,7 @@ const posts = [
         type: 'paragraph',
         content: 'Projetinho novo na area! 🚀',
       },
-      { type: 'anchor', content: '👉 jane.design/doctorcare' },
+      { type: 'anchor', content: 'jane.design/doctorcare' },
       { type: 'hashtag', content: '#novoprojeto' },
       { type: 'hashtag', content: '#nlw' },
       { type: 'hashtag', content: '#rocketseat' },

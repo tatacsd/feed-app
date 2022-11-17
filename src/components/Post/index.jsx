@@ -45,7 +45,7 @@ export function Post({ author, content, publishedAt }) {
               return (
                 <p>
                   <a key={index} href={item.content}>
-                    {item.content}
+                    👉 {item.content}
                   </a>
                 </p>
               );
