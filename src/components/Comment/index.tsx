@@ -3,7 +3,12 @@ import { useState } from 'react';
 import { Avatar } from '../Avatar';
 import css from './Comment.module.css';
 
-export function Comment({ content, onDeleteComment }) {
+interface CommentProps {
+  content: string;
+  onDeleteComment: (comment: string) => void;
+}
+
+export function Comment({ content, onDeleteComment }: CommentProps) {
   const [claps, setClaps] = useState(0);
 
   const handleDeleteComment = () => {
@@ -16,7 +21,11 @@ export function Comment({ content, onDeleteComment }) {
 
   return (
     <div className={css.comment}>
-      <Avatar hasBorders={false} src="https://placekitten.com/200/200" />
+      <Avatar
+        hasBorders={false}
+        src="https://placekitten.com/200/200"
+        alt="Avatar"
+      />
       <div className={css.commentBox}>
         <div className={css.commentContent}>
           <header>
