@@ -1,39 +1,60 @@
+import { format, formatDistanceToNow } from 'date-fns';
 import { Avatar } from '../Avatar';
 import { Comment } from '../Comment';
 import css from './Post.module.css';
 
-export function Post() {
+export function Post({ author, content, publishedAt }) {
+  const publisheDateFormatted = new Intl.DateTimeFormat('en-US', {
+    month: 'long',
+    day: '2-digit',
+    year: 'numeric',
+    hour: '2-digit',
+    minute: '2-digit',
+  }).format(publishedAt);
+
+  const publishedAtFormatted = format(publishedAt, "d, LLL 'at' HH:mm'h'");
+
+  const publishDateRelativeToNow = formatDistanceToNow(publishedAt, {
+    addSuffix: true,
+  });
+
   return (
     <article className={css.post}>
       <header>
         <div className={css.author}>
-          <Avatar src="https://placekitten.com/200/200" />
+          <Avatar src={author.avatarURL} />
           <div className={css.authorInfo}>
-            <strong>John Doe</strong>
-            <span>Web Developer</span>
+            <strong>{author.name}</strong>
+            <span>{author.role}</span>
           </div>
         </div>
 
         <time
-          title="2022-11-15T00:00:00.000Z"
-          dateTime="Mon, 15 Nov 2022 00:00:00 GMT"
+          title={publisheDateFormatted}
+          dateTime={publishedAt.toISOString()}
         >
-          1 hour ago
+          {publishDateRelativeToNow}
         </time>
       </header>
       <div className={css.content}>
-        <p>Fala galeraa 👋 </p>
-        <p>
-          Acabei de subir mais um projeto no meu portifa. É um projeto que fiz
-          no NLW Return, evento da Rocketseat. O nome do projeto é DoctorCare 🚀
-        </p>
-        <p>
-          <a href="#"> 👉 jane.design/doctorcare</a>
-        </p>
-        <p>
-          <a href="#">#novoprojeto</a> <a href="#">#nlw</a>{' '}
-          <a href="#">#rocketseat</a>{' '}
-        </p>
+        {content.map((item, index) => {
+          switch (item.type) {
+            case 'paragraph':
+              return <p key={index}>{item.content}</p>;
+            case 'anchor':
+              return (
+                <p>
+                  <a key={index} href={item.content}>
+                    {item.content}
+                  </a>
+                </p>
+              );
+            case 'hashtag':
+              return <span key={index}>{item.content}</span>;
+            default:
+              return null;
+          }
+        })}
       </div>
 
       <form className={css.commentForm}>

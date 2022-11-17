@@ -2,7 +2,7 @@ import { PencilLine } from 'phosphor-react';
 import { Avatar } from '../Avatar';
 import css from './Sidebar.module.css';
 
-const imageURL = 'https://source.unsplash.com/random/300x100';
+const imageURL = 'https://source.unsplash.com/random/800x100';
 const avatarURL = 'https://i.pravatar.cc/400';
 
 export function Sidebar() {
