@@ -52,18 +52,18 @@ export function Post({ author, content, publishedAt }) {
         </time>
       </header>
       <div className={css.content}>
-        {content.map((item, index) => {
+        {content.map((item) => {
           switch (item.type) {
             case 'paragraph':
-              return <p key={index}>{item.content}</p>;
+              return <p key={item.content}>{item.content}</p>;
             case 'anchor':
               return (
-                <p key={index}>
+                <p key={item.content}>
                   <a href={item.content}>👉 {item.content}</a>
                 </p>
               );
             case 'hashtag':
-              return <span key={index}>{item.content}</span>;
+              return <span key={item.content}>{item.content}</span>;
             default:
               return null;
           }
@@ -84,8 +84,8 @@ export function Post({ author, content, publishedAt }) {
       </form>
 
       <div className={css.commentList}>
-        {comments.map((comment, index) => (
-          <Comment key={index} content={comment} />
+        {comments.map((comment) => (
+          <Comment key={comment} content={comment} />
         ))}
       </div>
     </article>
