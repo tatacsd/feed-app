@@ -28,7 +28,7 @@
 <br>
 
 <p align="center">
-  <img alt="Todo app" src="./public/feed-app.svg" width="100%">
+  <img alt="Feed app" src="./public/feed-app.svg" width="100%">
 </p>
 
 ## 🚀 Technologies
@@ -44,7 +44,7 @@ This project was developed using the following technologies:
 
 ## 💻 Project
 
-The todo app is an application that allows the user to create a task list, being able to add, remove and mark as completed.
+This project is a feed app, where you can add a new post and see the posts of other users. It was developed during the Ignite course, a bootcamp offered by Rocketseat[https://rocketseat.com.br/].
 
 ## 🔖 Layout
 
@@ -56,12 +56,10 @@ You can view the project layout through the links below:
 
 ## 🧠 Challenge
 
-This repository aims to be a challenge to create a todo list application, where the user can add, remove and mark as completed. This challenge was proposed by [Rocketseat](https://rocketseat.com.br/) on the [Ignite](https://rocketseat.com.br/ignite) bootcamp course.
-In the challenge: Practicing Concepts.
+This project was developed during the Ignite course, a bootcamp offered by Rocketseat[https://rocketseat.com.br/]. The goal on creating this project was to practice the concepts of React, Typescript, Vite, Uiid and Phosphor react, on components, props, states, and some hooks, like useState.
 
-During this first challenge of the Ignite course, I was able to improve the ReactJS skills by creating a simple to-do list application.
+We focused on the componentization of the application, creating a Header, a Post, a Post, and Comments components.
 
-During this challenge, I was able to practice the following concepts: ReactJS, State, Props, Immutability, Components, Hooks, TypeScript, Vite, Uiid, Phosphor react, css modules and more.
 
 
 ## 🚀 How to run
@@ -82,14 +80,14 @@ $ npm i
 ```bash
 $ npm run dev
 ```
-- The application will open on the port:3000 - access http://localhost:3000
+- The application will open on the port:3001 - access http://localhost:3001
 
 You can change the port in the vite.config.ts file.
 ```ts
 export default defineConfig({
   plugins: [react()],
   server: {
-    port: 3000,
+    port: 3001,
   }
 })
 ```
