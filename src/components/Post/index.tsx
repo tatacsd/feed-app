@@ -7,6 +7,7 @@ import css from './Post.module.css';
 export interface Content {
   type: 'paragraph' | 'anchor' | 'hashtag';
   content: string;
+  href?: string;
 }
 
 export interface PostProps {
@@ -90,11 +91,17 @@ export function Post({ id, author, content, publishedAt }: PostProps) {
             case 'anchor':
               return (
                 <p key={item.content}>
-                  <a href={item.content}>👉 {item.content}</a>
+                  <a href={item.href} target="_blank">
+                    👉 {item.content}
+                  </a>
                 </p>
               );
             case 'hashtag':
-              return <span key={item.content}>{item.content}</span>;
+              return (
+                <span key={item.content} className={css.displayInline}>
+                  {item.content}
+                </span>
+              );
             default:
               return null;
           }

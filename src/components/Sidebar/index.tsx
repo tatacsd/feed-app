@@ -2,8 +2,10 @@ import { PencilLine } from 'phosphor-react';
 import { Avatar } from '../Avatar';
 import css from './Sidebar.module.css';
 
-const imageURL = 'https://source.unsplash.com/random/800x100';
-const avatarURL = 'https://i.pravatar.cc/400';
+// const imageURL = 'https://source.unsplash.com/random/800x150';
+const imageURL =
+  'https://images.unsplash.com/photo-1481026469463-66327c86e544?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1216&q=80';
+const avatarURL = 'https://github.com/tatacsd.png';
 
 export function Sidebar() {
   return (
@@ -11,8 +13,8 @@ export function Sidebar() {
       <img className={css.cover} src={imageURL} alt="sidebar" />
       <div className={css.profile}>
         <Avatar src={avatarURL} />
-        <strong>John Doe</strong>
-        <span>Web Developer</span>
+        <strong>Thays Casado</strong>
+        <span>Fullstack Developer</span>
       </div>
       <footer>
         <a href="#">

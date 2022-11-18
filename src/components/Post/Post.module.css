@@ -1,129 +1,154 @@
 .post {
-    background-color: var(--gray-800);
-    border-radius: 8px;
-    padding: 2.5rem;
+  background-color: var(--gray-800);
+  border-radius: 8px;
+  padding: 2.5rem;
 }
-
 
 /* If there is more than one post add margin top to the post. */
 .post + .post {
-    margin-top: 2rem;
+  margin-top: 2rem;
 }
 
 .post > header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .post > header time {
-    font-size: 0.875rem;
-    color: var(--gray-400);
+  font-size: 0.875rem;
+  color: var(--gray-400);
 }
 
 .author {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
 
 .authorInfo {
-    display: flex;
-    flex-direction: column;
-    gap: 0.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
 }
 
 .authorInfo > strong {
-   line-height: 1.6;
-    color: var(--gray-100);
+  line-height: 1.6;
+  color: var(--gray-100);
 }
 
 .authorInfo > span {
-    font-size: 0.875rem;
-    color: var(--gray-400);
-    line-height: 1.6;
+  font-size: 0.875rem;
+  color: var(--gray-400);
+  line-height: 1.6;
 }
 
-
 .content {
-    line-height: 1.6;
-    color: var(--gray-300);
-    margin-top: 1.5rem;
+  line-height: 1.6;
+  color: var(--gray-300);
+  margin-top: 1.5rem;
 }
 
 .content p {
-    margin-top: 1.rem;
+  margin-top: 1rem;
 }
 
 .content a {
-    color: var(--green-500);
-    text-decoration: none;
-    font-weight: bold;
+  color: var(--green-500);
+  text-decoration: none;
+  font-weight: bold;
 }
 
 .content a:hover {
-    color: var(--green-300);
+  color: var(--green-300);
 }
 
 .commentForm {
-    width: 100%;
-    margin-top: 1.5rem;
-    padding-top: 1.5rem;
-    border-top: 1px solid var(--gray-600);
+  width: 100%;
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--gray-600);
 }
 
 .commentForm > strong {
-    line-height: 1.6;
-    color: var(--gray-100);
+  line-height: 1.6;
+  color: var(--gray-100);
 }
 
 .commentForm textarea {
-    width: 100%;
-    background-color: var(--gray-900);
-    border: 0;
-    height: 6rem;
-    padding: 1rem;
-    border-radius: 8px;
-    color: var(--gray-100);
-    line-height: 1.4;
-    margin-top: 1rem;
-    resize: none;
+  width: 100%;
+  background-color: var(--gray-900);
+  border: 0;
+  height: 6rem;
+  padding: 1rem;
+  border-radius: 8px;
+  color: var(--gray-100);
+  line-height: 1.4;
+  margin-top: 1rem;
+  resize: none;
 }
 
-.commentForm button[type="submit"] {
-   padding: 1rem 1.5rem;
-   margin-top: 1rem;
-    border: 0;
-    border-radius: 8px;
-    background-color: var(--green-500);
-    color: var(--gray-100);
-    font-weight: bold;
-    cursor: pointer;
+.commentForm button[type='submit'] {
+  padding: 1rem 1.5rem;
+  margin-top: 1rem;
+  border: 0;
+  border-radius: 8px;
+  background-color: var(--green-500);
+  color: var(--gray-100);
+  font-weight: bold;
+  cursor: pointer;
 
-    transition: background-color 0.2s;
+  transition: background-color 0.2s;
 }
 
 /* Create a transition to the button when the clicks on the form. */
 
 .commentForm footer {
-    visibility: hidden;
-    max-height: 0;
+  visibility: hidden;
+  max-height: 0;
 }
 
 .commentForm:focus-within footer {
-    visibility: visible;
-    max-height: none;
-    transition: max-height 0.2s;
+  visibility: visible;
+  max-height: none;
+  transition: max-height 0.2s;
 }
 
-.commentForm button[type="submit"]:not(:disabled):hover {
-    background-color: var(--green-300);
+.commentForm button[type='submit']:not(:disabled):hover {
+  background-color: var(--green-300);
 }
-.commentForm button[type="submit"]:disabled {
-    opacity: 0.6;
-    cursor: not-allowed;
+.commentForm button[type='submit']:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
 }
 
 .commentList {
-    margin-top: 2rem;
+  margin-top: 2rem;
+}
+
+.displayInline {
+  display: inline;
+  color: var(--green-500);
+}
+
+.displayInline + .displayInline {
+  margin-left: 0.5rem;
+  color: var(--green-500);
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  .post {
+    max-width: 90%;
+    margin: 0 auto;
+  }
+
+  .content {
+    text-align: justify;
+  }
+
+  .content > span {
+    /* break the line to fit the screen; */
+    word-break: break-all;
+  }
 }

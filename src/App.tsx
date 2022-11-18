@@ -8,64 +8,29 @@ const posts = [
   {
     id: 1,
     author: {
-      name: 'John Doe',
-      avatarURL: 'https://placekitten.com/200/300',
-      role: 'Frontend Engineer',
+      name: '@thayscasado',
+      avatarURL: 'https://github.com/tatacsd.png',
+      role: 'Fullstack Developer',
     },
     content: [
-      { type: 'paragraph', content: 'Fala galeraa 👋' },
+      { type: 'paragraph', content: 'Helloo there! 👋' },
       {
         type: 'paragraph',
         content:
-          'Acabei de subir mais um projeto no meu portifa. É um projeto que fiz no NLW Return, evento da Rocketseat. O nome do projeto é DoctorCare 🚀',
+          'I have just finished a to do app. It is an application that allows the user to create a task list, being able to add, remove and mark as completed. It is called ToDo App and it is available on my GitHub. This project is the first on ignite track course from rocketseat. It is a simple application, but it was very interesting to develop it. I hope you like it!',
       },
-      { type: 'anchor', content: 'jane.design/doctorcare' },
-      { type: 'hashtag', content: '#novoprojeto' },
-      { type: 'hashtag', content: '#nlw' },
-      { type: 'hashtag', content: '#rocketseat' },
-    ],
-    publishedAt: new Date('2022-11-15 00:00:00'),
-  },
-  {
-    id: 2,
-    author: {
-      name: 'Jane Doe',
-      avatarURL: 'https://placekitten.com/200/300',
-      role: 'Backend Engineer',
-    },
-    content: [
-      { type: 'paragraph', content: 'Fala galeraa 👋' },
       {
-        type: 'paragraph',
-        content:
-          'Acabei de subir mais um projeto no meu portifa. É um projeto que fiz no NLW Return, evento da Rocketseat. O nome do projeto é DoctorCare 🚀',
+        type: 'anchor',
+        href: 'https://github.com/tatacsd/todo-app',
+        content: 'github.com/tatacsd/todo-app',
       },
-      { type: 'anchor', content: 'jane.design/doctorcare' },
-      { type: 'hashtag', content: '#novoprojeto' },
-      { type: 'hashtag', content: '#nlw' },
+      { type: 'hashtag', content: '#newProject' },
       { type: 'hashtag', content: '#rocketseat' },
+      { type: 'hashtag', content: '#todoApp' },
+      { type: 'hashtag', content: '#ignite' },
+      { type: 'hashtag', content: '#challenge' },
     ],
-    publishedAt: new Date('2022-11-15 00:10:00'),
-  },
-  {
-    id: 3,
-    author: {
-      name: 'John Doe',
-      avatarURL: 'https://placekitten.com/200/300',
-      role: 'Quality Assurance Engineer',
-    },
-    content: [
-      { type: 'paragraph', content: 'Fala galeraa 👋' },
-      {
-        type: 'paragraph',
-        content: 'Projetinho novo na area! 🚀',
-      },
-      { type: 'anchor', content: 'jane.design/doctorcare' },
-      { type: 'hashtag', content: '#novoprojeto' },
-      { type: 'hashtag', content: '#nlw' },
-      { type: 'hashtag', content: '#rocketseat' },
-    ],
-    publishedAt: new Date('2022-11-12 00:20:00'),
+    publishedAt: new Date('2022-11-16 23:55:00'),
   },
 ] as PostProps[];
 
